@@ -2,25 +2,47 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 .container {
-   margin: 0px 150px; 
+    display: flex;
+    flex-wrap: wrap
 }
 
 .header {
+    display: flex;
+    justify-content: center;
     background-image: linear-gradient(90deg, #eae7dc, #b6986f);
-    height: 813px;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .header-line {
-    padding-top: 67px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    gap: 20vw;
+    max-width: 80%;
+    /* justify-content: space-around; */
 }
 
 .header-logo {
     margin-left: -150px;
+}
+
+.header-logo src {
+    height: 100%;
+}
+
+.cards {
+    display: inline-block;
 }
 
 .navigation {
@@ -30,7 +52,7 @@ body {
 
 .navigation-item {
     position: relative;
-    padding: 5px 25px;
+    padding: 1vh 2vh;
     text-align: center;
 }
 
@@ -57,6 +79,7 @@ body {
 
 .navigation-item__dropdown {
     position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 5px 0 0 0;
     width: 100%;
     left: 0;
@@ -65,50 +88,80 @@ body {
 }
 
 .navigation-item__dropdown .navigation-item__link {
-    padding: 5px 0;
+    padding: 1vh 0;
 }
+
 .header-down {
-position: relative;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20vh auto;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
 }
 
 .header-title {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     font-size: 30px;
-    position: absolute;
-    left: 0;
-    margin: 142px 0px;
+    /* left: 0; */
+    margin: 5vh auto;
+    max-width: 65%;
+    width: 480px;
+    min-width: 30vw;
+    text-align: justify;
 }
 
 .header-subtitle {
+    display: flex;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 100;
     font-size: 26px;
 }
 
-.header-photo {
-    margin: 100px 772px;
+.photo {
+    max-width: 100%;
+    /* width: 75%; */
+    height: 100%;
+    max-height: 150%;
+    
 }
+
+.header-photo {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
 .card-holder {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
+
 .card {
-background-color: #EBE7E7;
-height: 224px;
-width: 233px;
-border-radius: 22px;
-margin-top: -200px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    background-color: #EBE7E7;
+    height: 224px;
+    width: 233px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-image {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .card-title {
@@ -134,17 +187,50 @@ justify-content: space-between;
 .card-title-item:hover {
     color: gray;
 }
-.choise-title{
+
+.choises {
+    display: flex;
+    flex-direction: column;
+}
+
+.choise-title {
+    display: flex;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     font-size: 30px;
-    margin: 193px 0px 0px 150px;
+    margin-left: 10cqw;
 }
+
 .choise {
-display: flex;
-justify-content: space-between;
-margin: 71px 76px 0px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.choise-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.choise-item {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    max-width: 100%;
+}
+
+.choise-image img {
+    width: 64px;
+    height: 64px;
+}
+
+.choise-desk p {
+    margin: 0;
 }
 
 .choise-desk {
@@ -152,41 +238,47 @@ margin: 71px 76px 0px 150px;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 100;
     font-size: 24px;
-    margin-top: -15px;
 }
 
 .care {
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(60deg, #eae4dc, #e7d6bf);
-    height: 993px;
     margin-top: 193px;
 }
 
 .care-title {
+    display: flex;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     font-size: 30px;
-    margin: 180px 0px 0px 150px;
-    padding: 25px 0 0 0;
+    margin-left: 10cqw;
 }
 
-.cards-care-holder{
+.cards-care {
     display: flex;
+    justify-content: center;
+}
+
+.cards-care-holder {
+    display: flex;
+    flex-wrap: wrap;
     gap: 170px;
 }
 
 .card-animal {
-background-color: #FFFFFF;
-height: 593px;
-width: 400px;
-border-radius: 24px;
-margin-top: 71px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    background-color: #FFFFFF;
+    height: 593px;
+    width: 400px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
 }
 
-.card-animal-title{
+.card-animal-title {
     display: flex;
     justify-content: center;
     flex-grow: 1;
@@ -197,9 +289,9 @@ justify-content: space-between;
     font-size: 26px;
 }
 
-.card-animal-image{
+.card-animal-image {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .card-animal-desk {
@@ -224,7 +316,8 @@ justify-content: space-between;
 
 
 .btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     width: 200px;
     padding: 15px;
     color: #000000;
@@ -234,68 +327,79 @@ justify-content: space-between;
     outline: none;
     text-decoration: none;
     align-items: center;
-    margin: 100px 44% 0 44%;
-  }
-  .btn:hover,
-  .btn:active {
+    margin: 10vh auto;
+}
+
+.btn:hover,
+.btn:active {
     background-color: #FFFFFF;
     color: #000;
-  }
+}
 
-  .button{
+.button {
     text-decoration: none;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
 
-  }
+}
 
-  .advertise-title{
+.advertise-title {
+    display: flex;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     font-size: 30px;
-    margin: 90px 0px 0px 150px;
+    margin-left: 10cqw;
 }
 
-  .tizery-hr {
-    margin: 10px 0 10px 0; 
-    padding: 10px 5px 5px 5px; 
-    text-align: center; 
+.tizery-hr {
+    margin: 10px 0 10px 0;
+    padding: 10px 5px 5px 5px;
+    text-align: center;
 }
+
 .tizery-hr img {
-    width: 304px; 
-    height: 200px; 
-    display: block; 
-    margin: 25px auto 10px; 
+    width: 304px;
+    height: 200px;
+    display: block;
+    margin: 25px auto 10px;
 }
+
 .tizery-hr a {
-    color: #000 !important; 
-    display: inline-block; 
-    font-size: 18px !important; 
-    margin: 5px 0 5px 0; 
-    width: 400px; 
-    vertical-align: top; 
+    color: #000 !important;
+    display: inline-block;
+    font-size: 18px !important;
+    margin: 5px 0 5px 0;
+    width: 400px;
+    vertical-align: top;
     font-family: 'IBM Plex Sans', sans-serif;
     text-decoration: none;
     font-weight: 400;
 }
- 
+
 main {
     flex-grow: 1;
 }
 
-footer{
+footer {
     background-image: linear-gradient(90deg, #eae7dc, #b6986f);
-    padding: 90px;
+    width: 100%;
 }
-.fot{
-    display: flex;
-    margin-left: 75px;
-    gap: 350px;
 
+.fot {
+    display: flex;
+    gap: 20vw;
+    max-width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+.fot-item {
+    width: 10rem;
+}
+
 .desc {
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -303,7 +407,7 @@ footer{
     font-size: 20px;
 }
 
-.content-item{
+.content-item {
     text-decoration: underline;
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -312,32 +416,33 @@ footer{
 }
 
 .map {
-gap: 5px;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.map-item{
+.map-item {
     text-decoration: none;
     color: #000;
     font-family: "Open Sans", sans-serif;
     font-weight: 200;
     font-size: 20px;
 }
+
 .probel {
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 .contact {
-display: flex;
-flex-direction: column;
-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
 }
 
-body{
-    display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
+/* body { */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* min-height: 100vh; */
+    /* min-height: 100dvh; */
+/* } */
