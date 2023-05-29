@@ -1,0 +1,258 @@
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
+ body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+     "Segoe UI Emoji", "Segoe UI Symbol";
+ }
+
+ .container {
+   max-width: 100vw;
+   margin: 0 auto;
+ }
+
+ @media (min-width: 768px) {
+   .container {
+     max-width: 710px;
+     margin: 0 auto;
+   }
+ }
+
+ @media (min-width: 1200px) {
+   .container {
+     max-width: 1050px;
+     margin: 0 auto;
+   }
+ }
+
+ .itc-slider {
+   overflow: hidden;
+   padding-bottom: 35px;
+ }
+
+ .itc-slider__wrapper {
+   margin-left: -10px;
+   margin-right: -10px;
+ }
+
+ @media (min-width: 768px) {
+   .itc-slider__item {
+     flex: 0 0 50%;
+     max-width: 50%;
+   }
+ }
+
+ @media (min-width: 1200px) {
+   .itc-slider__item {
+     flex: 0 0 33.3333333333%;
+     max-width: 33.3333333333%;
+   }
+ }
+
+ .card {
+   position: relative;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+
+ .card__header {
+   position: relative;
+ }
+
+ .card__img {
+   display: block;
+   height: auto;
+   max-width: 100%;
+ }
+
+ .card__section {
+   position: absolute;
+   bottom: 6px;
+   left: 10px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: #fff;
+   padding: 6px 10px;
+   font-size: 14px;
+   border-radius: 12px;
+   line-height: 1;
+ }
+
+ .card__title {
+   background: #fafafa;
+   color: #424242;
+   white-space: normal;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 1.3;
+   padding: 10px 15px;
+   margin: 0;
+   height: 72px;
+ }
+
+ .card__footer {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   background: #fafafa;
+   padding: 10px 15px 15px;
+   color: #616161;
+ }
+
+ .card__photo {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+ }
+
+ .card__author {
+   margin-left: 6px;
+ }
+
+ .card__icon {
+   margin-left: auto;
+   width: 18px;
+   max-height: 20px;
+ }
+
+ .card__views {
+   margin-left: 6px;
+ }
+
+ .itc-slider__btn {
+   background-color: unset;
+ }
+
+ .itc-slider__btn:hover,
+ .itc-slider__btn:focus {
+   background-color: rgba(0, 0, 0, 0.1);
+ }
+
+ .itc-slider__indicators {
+   bottom: 0;
+ }
+
+ .itc-slider__indicator {
+   background-color: #eee;
+ }
+
+ .itc-slider__indicator_active {
+   background-color: #757575;
+ }
+
+ .itc-slider {
+    position: relative;
+  }
+  
+  .itc-slider__wrapper {
+    overflow: hidden;
+  }
+  
+  .itc-slider__items {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  
+  .itc-slider__transition-none {
+    transition: none;
+  }
+  
+  .itc-slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    user-select: none;
+    will-change: transform;
+  }
+  
+  /* ÐºÐ½Ð¾Ð¿ÐºÐ¸ Ð²Ð»ÐµÐ²Ð¾ Ð¸ Ð²Ð¿Ñ€Ð°Ð²Ð¾ */
+  .itc-slider__btn {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    background: rgb(0 0 0 / 20%);
+    border: none;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .itc-slider__btn_hide {
+    display: none;
+  }
+  
+  .itc-slider__btn_prev {
+    left: 0;
+  }
+  
+  .itc-slider__btn_next {
+    right: 0;
+  }
+  
+  .itc-slider__btn:hover,
+  .itc-slider__btn:focus {
+    color: #fff;
+    text-decoration: none;
+    background: rgb(0 0 0 / 30%);
+    outline: 0;
+  }
+  
+  .itc-slider__btn::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  
+  .itc-slider__btn_prev::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+  
+  .itc-slider__btn_next::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+  
+  /* Ð¸Ð½Ð´Ð¸ÐºÐ°Ñ‚Ð¾Ñ€Ñ‹ */
+  .itc-slider__indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .itc-slider__indicator {
+    flex: 0 1 auto;
+    box-sizing: content-box;
+    width: 30px;
+    height: 5px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgb(255 255 255 / 50%);
+    background-clip: padding-box;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    cursor: pointer;
+  }
+  
+  .itc-slider__indicator_active {
+    background-color: rgb(255 255 255 / 90%);
+  }
+  

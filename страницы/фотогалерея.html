@@ -1,202 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../стили/фотогалерея.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>Bon Ami</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../стили/фотогалерея.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet" />
+  <title>Bon Ami</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="header">
-    <div class="container">
-      <div class="header-line">
-        <div class="header-logo">
-          <img src="../картинки/лого.png" alt="" />
-        </div>
-
-        <div class="navigation">
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="../index.html">Главная</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="услуги.html">Услуги</a>
-            <div class="navigation-item__dropdown">
-              <a class="navigation-item__link" href="цены.html">Цены</a>
-              <a class="navigation-item__link" href="кошки.html">Кошки</a>
-              <a class="navigation-item__link" href="собаки.html">Собаки</a>
-            </div>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="фотогалерея.html">Фотогалерея</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="о нас.html">О нас</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="контакты.html">Контакты</a>
-          </div>
-        </div>
+    <div class="header-line">
+      <div class="header-logo">
+        <img src="../картинки/лого.png" alt="" />
       </div>
-     
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Услуги
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="услуги.html">Наши услуги</a>
+            <a href="цены.html">Цены</a>
+            <a href="кошки.html">Кошки</a>
+            <a href="собаки.html">Собаки</a>
+          </div>
+        </div>
+        <a href="фотогалерея.html" class="active">Фотогалерея</a>
+        <a href="контакты.html">Контакты</a>
+        <a href="о нас.html">О нас</a>
+        <a href="javascript:void(0)" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+    </div>
+  </div>
+  <div class="gallery">
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/кот.jpg" alt="кот белый" />
+      <div class="gallery__card_desc">
+        <h2>Баря</h2>
+        <p>Вычесывание колтунов</p>
       </div>
     </div>
-        <div class="gallery">
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/кот.jpg"
-                alt="кот белый"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/расчесывание.jpg"
-                alt="расчесывание собаки"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/стрижка.jpg"
-                alt="стрижка"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/стрижка машинкой.jpg"
-                alt="стрижка машинкой"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/уши.jpg"
-                alt="обработка ушей"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/глаза кот.jpg"
-                alt="обработка глаз"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/зубы.jpg"
-                alt="чистка зубов"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/глазки.jpg"
-                alt="обработка глаз"
-              />
-            </div>
-            <div class="gallery__card">
-              <img
-                class="gallery__card__pic"
-                src="../картинки/фотогалерея/душ.jpg"
-                alt="мытье"
-              />
-            </div>
-            <div class="gallery__card">
-                <img
-                  class="gallery__card__pic"
-                  src="../картинки/фотогалерея/рыжий.jpg"
-                  alt="рыжий кот"
-                />
-              </div>
-              <div class="gallery__card">
-                <img
-                  class="gallery__card__pic"
-                  src="../картинки/фотогалерея/дог.jpg"
-                  alt="просмотр ушей"
-                />
-              </div>
-              <div class="gallery__card">
-                <img
-                  class="gallery__card__pic"
-                  src="../картинки/фотогалерея/cute-dog.jpg"
-                  alt="собака"
-                />
-              </div>
-          </div>
-      
-          <div class="slider">
-            <div class="slider__container">
-              <button class="slider__btn slider__btn_left">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button class="slider__btn slider__btn_right">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
-            <button class="slider__close">
-              <i class="far fa-times-circle"></i>
-            </button>
-          </div>
-      
-          <script
-            src="https://kit.fontawesome.com/fce9a50d02.js"
-            crossorigin="anonymous"
-          ></script>
-          <script src="../скрипты/photo.js"></script>
-          <footer>
-            <div class="fot">
-                <div class="fot-logo">
-                    <img src="../картинки/лого.png" alt="логотип">
-                    <div class="probel">
-           
-                        <p>Лапки, ушки и доза любви! <br> Лучший зоосалон 2018, 2022</p>
-                        <p>Сделано в образовательных целях</p>
-                
-                        <a class="content-item" href="@">Используемый контент</a>
-                    </div>
-                </div>
-                <div class="map">
-                    <a class="map-item" href="../index.html">Главная</a>
-                    <a class="map-item" href="услуги.html">Услуги</a>
-                    <a class="map-item" href="цены.html">-Цены</a>
-                    <a class="map-item" href="кошки.html">-Кошки</a>
-                    <a class="map-item" href="собаки.html">-Собаки</a>
-                    <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
-                    <a class="map-item" href="о нас.html">О нас </a>
-                    <a class="map-item" href="контакты.html">Контакты</a>
-                </div>
-                <div class="contact">
-                    <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
-                    <span>Телефон: +7 909 967 60 15</span>
-                    <span>График работы: без выходных <br> с 9:00 до 21:00</span>
-                    <span>Электронная почта: <br> 
-                        info@bonami.ru</span>
-                </div>
-                </div>
-        </footer>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/расчесывание.jpg" alt="расчесывание собаки"
+        loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Арнольд</h2>
+        <p>Подготовка к стрижке</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/стрижка.jpg" alt="стрижка" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Мося</h2>
+        <p>Креативная стрижка</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/стрижка машинкой.jpg" alt="стрижка машинкой"
+        loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Пончик</h2>
+        <p>Стрижка машинкой</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/уши.jpg" alt="обработка ушей" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Вольт</h2>
+        <p>Проверка ушек</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/глаза кот.jpg" alt="обработка глаз" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Баря</h2>
+        <p>Обработка глаз</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/зубы.jpg" alt="чистка зубов" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Арнольд</h2>
+        <p>Чистка зубов</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/глазки.jpg" alt="обработка глаз" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Кокос</h2>
+        <p>Лечение глаз</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/душ.jpg" alt="мытье" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Боня</h2>
+        <p>Мытьё</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/рыжий.jpg" alt="рыжий кот" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Гарфилд</h2>
+        <p>Стрижка</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/дог.jpg" alt="просмотр ушей" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Кинг</h2>
+        <p>Просмотр ушей</p>
+      </div>
+    </div>
+    <div class="gallery__card">
+      <img class="gallery__card__pic" src="../картинки/фотогалерея/cute-dog.jpg" alt="собака" loading="lazy" />
+      <div class="gallery__card_desc">
+        <h2>Конфетка</h2>
+        <p>Креативная стрижка</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slider__container">
+      <button class="slider__btn slider__btn_left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider__btn slider__btn_right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <button class="slider__close">
+      <i class="far fa-times-circle"></i>
+    </button>
+  </div>
+
+  <script src="https://kit.fontawesome.com/fce9a50d02.js" crossorigin="anonymous"></script>
+  <script src="../скрипты/photo.js"></script>
+  <a href="#" class="scrollup"></a>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+
+    });
+  </script>
+  <footer>
+    <div class="fot">
+      <div class="fot-item map">
+        <a class="map-item" href="../index.html">Главная</a>
+        <a class="map-item" href="услуги.html">Услуги</a>
+        <a class="map-item" href="цены.html">-Цены</a>
+        <a class="map-item" href="кошки.html">-Кошки</a>
+        <a class="map-item" href="собаки.html">-Собаки</a>
+        <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
+        <a class="map-item" href="о нас.html">О нас </a>
+        <a class="map-item" href="контакты.html">Контакты</a>
+      </div>
+      <div class="fot-item">
+        <div class="fot-item probel">
+          <span> Лапки, ушки и доза любви! </span>
+          <span> Лучший зоосалон 2018, 2022 </span>
+          <span>Сделано в образовательных целях</span>
+          <!-- <a class="content-item" href="@">Используемый контент</a> -->
+        </div>
+      </div>
+      <div class="fot-item contact">
+        <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
+        <span>Телефон: +7 909 967 60 15</span>
+        <span>График работы: без выходных <br />
+          с 9:00 до 21:00</span>
+        <span>Электронная почта: <br />
+          info@bonami.ru</span>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

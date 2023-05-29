@@ -1,288 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../стили/цены.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>Bon Ami</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../стили/цены.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet" />
+  <title>Bon Ami</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="header">
-    <div class="container">
-      <div class="header-line">
-        <div class="header-logo">
-          <img src="../картинки/лого.png" alt="" />
-        </div>
-
-        <div class="navigation">
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="../index.html">Главная</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="услуги.html">Услуги</a>
-            <div class="navigation-item__dropdown">
-              <a class="navigation-item__link" href="цены.html">Цены</a>
-              <a class="navigation-item__link" href="кошки.html">Кошки</a>
-              <a class="navigation-item__link" href="собаки.html">Собаки</a>
-            </div>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="фотогалерея.html">Фотогалерея</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="о нас.html">О нас</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="контакты.html">Контакты</a>
+    <div class="header-line">
+      <div class="header-logo">
+        <img src="../картинки/лого.png" alt="" loading="lazy" />
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Услуги
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="услуги.html">Наши услуги</a>
+            <a href="цены.html" class="active">Цены</a>
+            <a href="кошки.html">Кошки</a>
+            <a href="собаки.html">Собаки</a>
           </div>
         </div>
+        <a href="фотогалерея.html">Фотогалерея</a>
+        <a href="контакты.html">Контакты</a>
+        <a href="о нас.html">О нас</a>
+        <a href="javascript:void(0)" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-     
-      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
     </div>
-        <table>
-            <caption>Ценовой сегмент Bon Ami</caption>
-            <thead>
-              <tr>
-                <th>Породы</th>
-                <th>Стрижка под машинку</th>
-                <th>Мытье и сушка</th>
-                <th>Маникюр</th>
-                <th>Чистка ушек</th>
-                <th>Обработка глаз</th>
-                <th>Креативная стрижка</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Джек-рассел терьер</th>
-                <td>2100&#8381</td>
-                <td>1250&#8381</td>
-                <td>700&#8381</td>
-                <td>400&#8381</td>
-                <td>450&#8381</td>
-                <td>2500&#8381</td>
-              </tr>
-              <tr>
-                <th>Йорк терьер</th>
-                <td>2700&#8381</td>
-                <td>1550&#8381</td>
-                <td>700&#8381</td>
-                <td>400&#8381</td>
-                <td>500&#8381</td>
-                <td>3000&#8381</td>
-              </tr>
-              <tr>
-               <th>Лабрадор</th>
-               <td>3350&#8381</td>
-               <td>2700 ру.</td>
-               <td>900&#8381</td>
-               <td>500&#8381</td>
-               <td>500&#8381</td>
-               <td>3500&#8381</td>
-              </tr>
-              <tr>
-                <th>Мультипу (до 5 кг)</th>
-                <td>2950&#8381</td>
-                <td>1550 ру.</td>
-                <td>700&#8381</td>
-                <td>400&#8381</td>
-                <td>400&#8381</td>
-                <td>3320&#8381</td>
-               </tr>
-               <th>Мультипу (от 5 кг)</th>
-                <td>3250&#8381</td>
-                <td>1650 ру.</td>
-                <td>700&#8381</td>
-                <td>400&#8381</td>
-                <td>400&#8381</td>
-                <td>3950&#8381</td>
-               </tr>
-               <th>Мопс</th>
-               <td>2700&#8381</td>
-               <td>1550 ру.</td>
-               <td>700&#8381</td>
-               <td>400&#8381</td>
-               <td>400&#8381</td>
-               <td>3000&#8381</td>
-              </tr>
-              <th>Папильон</th>
-               <td>2600&#8381</td>
-               <td>1300 ру.</td>
-               <td>700&#8381</td>
-               <td>400&#8381</td>
-               <td>400&#8381</td>
-               <td>2800&#8381</td>
-              </tr>
-              <th>Пекинес</th>
-              <td>3350&#8381</td>
-              <td>1870 ру.</td>
-              <td>700&#8381</td>
-              <td>400&#8381</td>
-              <td>400&#8381</td>
-              <td>3750&#8381</td>
-             </tr>
-             <th>Сеттер</th>
-              <td>2950&#8381</td>
-              <td>2190&#8381</td>
-              <td>700&#8381</td>
-              <td>400&#8381</td>
-              <td>400&#8381</td>
-              <td>4400&#8381</td>
-             </tr>
-             <th>Такса</th>
-             <td>2600&#8381</td>
-             <td>1350&#8381</td>
-             <td>700&#8381</td>
-             <td>400&#8381</td>
-             <td>450&#8381</td>
-             <td>2850&#8381</td>
-            </tr>
-            <th>Чи-хуа-хуа</th>
-            <td>2400&#8381</td>
-            <td>1150&#8381</td>
-            <td>600&#8381</td>
-            <td>400&#8381</td>
-            <td>450&#8381</td>
-            <td>2400&#8381</td>
-           </tr>
-           <th>Ши-тцу</th>
-           <td>3250&#8381</td>
-           <td>1950&#8381</td>
-           <td>700&#8381</td>
-           <td>400&#8381</td>
-           <td>450&#8381</td>
-           <td>4500&#8381</td>
-          </tr>
+  </div>
+  <div class="main">
+    <table>
+      <caption>
+        Ценовой сегмент Bon Ami
+      </caption>
+      <thead>
+        <tr>
+          <th>Породы</th>
+          <th>Стрижка под машинку</th>
+          <th>Мытье и сушка</th>
+          <th>Маникюр</th>
+          <th>Чистка ушек</th>
+          <th>Обработка глаз</th>
+          <th>Креативная стрижка</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Джек-рассел терьер</th>
+          <td>2100₽</td>
+          <td>1250₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>2500₽</td>
+        </tr>
+        <tr>
+          <th>Йорк терьер</th>
+          <td>2700₽</td>
+          <td>1550₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>500₽</td>
+          <td>3000₽</td>
+        </tr>
+        <tr>
+          <th>Лабрадор</th>
+          <td>3350₽</td>
+          <td>2700₽</td>
+          <td>900₽</td>
+          <td>500₽</td>
+          <td>500₽</td>
+          <td>3500₽</td>
+        </tr>
+        <tr>
+          <th>Мультипу (до 5 кг)</th>
+          <td>2950₽</td>
+          <td>1550₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>400₽</td>
+          <td>3320₽</td>
+        </tr>
+        <tr>
+          <th>Мультипу (от 5 кг)</th>
+          <td>3250₽</td>
+          <td>1650₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>400₽</td>
+          <td>3950₽</td>
+        </tr>
+        <tr>
+          <th>Мопс</th>
+          <td>2700₽</td>
+          <td>1550₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>400₽</td>
+          <td>3000₽</td>
+        </tr>
+        <tr>
+          <th>Папильон</th>
+          <td>2600₽</td>
+          <td>1300₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>400₽</td>
+          <td>2800₽</td>
+        </tr>
+        <tr>
+          <th>Пекинес</th>
+          <td>3350₽</td>
+          <td>1870₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>400₽</td>
+          <td>3750₽</td>
+        </tr>
+        <tr>
+          <th>Сеттер</th>
+          <td>2950₽</td>
+          <td>2190₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>400₽</td>
+          <td>4400₽</td>
+        </tr>
+        <tr>
+          <th>Такса</th>
+          <td>2600₽</td>
+          <td>1350₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>2850₽</td>
+        </tr>
+        <tr>
+          <th>Чи-хуа-хуа</th>
+          <td>2400₽</td>
+          <td>1150₽</td>
+          <td>600₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>2400₽</td>
+        </tr>
+        <tr>
+          <th>Ши-тцу</th>
+          <td>3250₽</td>
+          <td>1950₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>4500₽</td>
+        </tr>
+        <tr>
           <th>Шпиц малый</th>
-           <td>2500&#8381</td>
-           <td>1550&#8381</td>
-           <td>700&#8381</td>
-           <td>400&#8381</td>
-           <td>450&#8381</td>
-           <td>3850&#8381</td>
-          </tr>
+          <td>2500₽</td>
+          <td>1550₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>3850₽</td>
+        </tr>
+        <tr>
           <th>Шпиц средний</th>
-           <td>2700&#8381</td>
-           <td>1770&#8381</td>
-           <td>700&#8381</td>
-           <td>400&#8381</td>
-           <td>450&#8381</td>
-           <td>4250&#8381</td>
-          </tr>
+          <td>2700₽</td>
+          <td>1770₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>4250₽</td>
+        </tr>
+        <tr>
           <th>Шпиц большой</th>
-           <td>3050&#8381</td>
-           <td>1950&#8381</td>
-           <td>700&#8381</td>
-           <td>400&#8381</td>
-           <td>450&#8381</td>
-           <td>4700&#8381</td>
-          </tr>
+          <td>3050₽</td>
+          <td>1950₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>4700₽</td>
+        </tr>
+        <tr>
           <th>Эрдель терьер</th>
-           <td>3050&#8381</td>
-           <td>1650&#8381</td>
-           <td>700&#8381</td>
-           <td>400&#8381</td>
-           <td>450&#8381</td>
-           <td>4500&#8381</td>
-          </tr>
+          <td>3050₽</td>
+          <td>1650₽</td>
+          <td>700₽</td>
+          <td>400₽</td>
+          <td>450₽</td>
+          <td>4500₽</td>
+        </tr>
+        <tr>
           <th>Мейн-кун</th>
-          <td>5000&#8381</td>
-          <td>4000&#8381</td>
-          <td>800&#8381</td>
-          <td>550&#8381</td>
-          <td>550&#8381</td>
-          <td>6500&#8381</td>
-         </tr>
-         <th>Корот. коты</th>
-         <td>4190&#8381</td>
-         <td>2420&#8381</td>
-         <td>700&#8381</td>
-         <td>500&#8381</td>
-         <td>500&#8381</td>
-         <td>5000&#8381</td>
+          <td>5000₽</td>
+          <td>4000₽</td>
+          <td>800₽</td>
+          <td>550₽</td>
+          <td>550₽</td>
+          <td>6500₽</td>
         </tr>
-        <th>Гладк. коты</th>
-         <td>4190&#8381</td>
-         <td>2420&#8381</td>
-         <td>700&#8381</td>
-         <td>500&#8381</td>
-         <td>500&#8381</td>
-         <td>5000&#8381</td>
+        <tr>
+          <th>Корот. коты</th>
+          <td>4190₽</td>
+          <td>2420₽</td>
+          <td>700₽</td>
+          <td>500₽</td>
+          <td>500₽</td>
+          <td>5000₽</td>
         </tr>
-        <th>Длинн. коты</th>
-         <td>4190&#8381</td>
-         <td>2650&#8381</td>
-         <td>700&#8381</td>
-         <td>500&#8381</td>
-         <td>500&#8381</td>
-         <td>5100&#8381</td>
+        <tr>
+          <th>Гладк. коты</th>
+          <td>4190₽</td>
+          <td>2420₽</td>
+          <td>700₽</td>
+          <td>500₽</td>
+          <td>500₽</td>
+          <td>5000₽</td>
         </tr>
-            </tbody>
-            </table>
+        <tr>
+          <th>Длинн. коты</th>
+          <td>4190₽</td>
+          <td>2650₽</td>
+          <td>700₽</td>
+          <td>500₽</td>
+          <td>500₽</td>
+          <td>5100₽</td>
+        </tr>
+      </tbody>
+    </table>
     <div class="explain">
-        <p>Если вы не нашли породу своей кошки или собаки, то выяснить приблизительную стоимость можно по телефону. <br>
-            Возможно увеличение стоимости услуг: Нестандартный вес 300 - 500&#8381 Агрессия 500 -1000&#8381 Распутывание колтунов – 100-1000&#8381 <br>
-            Обработка от блох (обязательная процедура, если собака пришла с блохами) - 300-600&#8381 <br>
-            Снятие клещей + обработка - 200&#8381</p>
+      <p>
+        Если вы не нашли породу своей кошки или собаки, то выяснить
+        приблизительную стоимость можно по <a href="tel:+79099676015  ">телефону</a>. <br />
+        Возможно увеличение стоимости услуг: Нестандартный вес 300 - 500₽
+        Агрессия 500 -1000₽ Распутывание колтунов – 100-1000₽ <br />
+        Обработка от блох (обязательная процедура, если собака пришла с блохами)
+        - 300-600₽ <br />
+        Снятие клещей + обработка - 200₽
+      </p>
     </div>
-    <div class="dog">
+  </div>
+  <a href="#" class="scrollup"></a>
+  <script type="text/javascript">
+    $(document).ready(function () {
 
-    </div>
-    <div class="cat">
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
 
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+
+    });
+  </script>
+  <footer>
+    <div class="fot">
+      <div class="fot-item map">
+        <a class="map-item" href="../index.html">Главная</a>
+        <a class="map-item" href="услуги.html">Услуги</a>
+        <a class="map-item" href="цены.html">-Цены</a>
+        <a class="map-item" href="кошки.html">-Кошки</a>
+        <a class="map-item" href="собаки.html">-Собаки</a>
+        <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
+        <a class="map-item" href="о нас.html">О нас </a>
+        <a class="map-item" href="контакты.html">Контакты</a>
+      </div>
+      <div class="fot-item">
+        <div class="fot-item probel">
+          <span> Лапки, ушки и доза любви! </span>
+          <span> Лучший зоосалон 2018, 2022 </span>
+          <span>Сделано в образовательных целях</span>
+          <!-- <a class="content-item" href="@">Используемый контент</a> -->
+        </div>
+      </div>
+      <div class="fot-item contact">
+        <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
+        <span>Телефон: +7 909 967 60 15</span>
+        <span>График работы: без выходных <br />
+          с 9:00 до 21:00</span>
+        <span>Электронная почта: <br />
+          info@bonami.ru</span>
+      </div>
     </div>
-    <footer>
-      <div class="fot">
-          <div class="fot-logo">
-              <img src="../картинки/лого.png" alt="логотип">
-              <div class="probel">
-     
-                  <p>Лапки, ушки и доза любви! <br> Лучший зоосалон 2018, 2022</p>
-                  <p>Сделано в образовательных целях</p>
-          
-                  <a class="content-item" href="@">Используемый контент</a>
-              </div>
-          </div>
-          <div class="map">
-              <a class="map-item" href="../index.html">Главная</a>
-              <a class="map-item" href="услуги.html">Услуги</a>
-              <a class="map-item" href="цены.html">-Цены</a>
-              <a class="map-item" href="кошки.html">-Кошки</a>
-              <a class="map-item" href="собаки.html">-Собаки</a>
-              <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
-              <a class="map-item" href="о нас.html">О нас </a>
-              <a class="map-item" href="контакты.html">Контакты</a>
-          </div>
-          <div class="contact">
-              <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
-              <span>Телефон: +7 909 967 60 15</span>
-              <span>График работы: без выходных <br> с 9:00 до 21:00</span>
-              <span>Электронная почта: <br> 
-                  info@bonami.ru</span>
-          </div>
-          </div>
   </footer>
 </body>
+
 </html>

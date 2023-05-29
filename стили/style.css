@@ -1,3 +1,7 @@
+@import "header.css";
+@import "footer.css";
+@import "scroll_up.css";
+
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
@@ -5,91 +9,6 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(90deg, #eae7dc, #b6986f);
-    width: 100%;
-}
-
-.header-container {
-    display: flex;
-    justify-content: center;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.header-line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20vw;
-    max-width: 80%;
-    /* justify-content: space-around; */
-}
-
-.header-logo {
-    margin-left: -150px;
-}
-
-.header-logo src {
-    height: 100%;
-}
-
-.cards {
-    display: inline-block;
-}
-
-.navigation {
-    display: flex;
-    gap: 25px;
-}
-
-.navigation-item {
-    position: relative;
-    padding: 1vh 2vh;
-    text-align: center;
-}
-
-.navigation-item:hover {
-    background-color: #EBE7E7;
-}
-
-.navigation-item:hover .navigation-item__dropdown {
-    display: flex;
-    background-color: #EBE7E7;
-}
-
-.navigation-item__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 21px;
-    transition: color 0.3s linear;
-}
-
-.navigation-item__link:hover {
-    color: sienna;
-}
-
-.navigation-item__dropdown {
-    position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 5px 0 0 0;
-    width: 100%;
-    left: 0;
-    display: none;
-    flex-direction: column;
-}
-
-.navigation-item__dropdown .navigation-item__link {
-    padding: 1vh 0;
-}
 
 .header-down {
     position: relative;
@@ -112,7 +31,6 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     font-size: 30px;
-    /* left: 0; */
     margin: 5vh auto;
     max-width: 65%;
     width: 480px;
@@ -128,9 +46,9 @@ body {
     font-size: 26px;
 }
 
+
 .photo {
     max-width: 100%;
-    /* width: 75%; */
     height: 100%;
     max-height: 150%;
     
@@ -140,6 +58,10 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
+}
+
+.cards {
+    display: inline-block;
 }
 
 .card-holder {
@@ -204,24 +126,30 @@ body {
 
 .choise {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto;
-    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .choise-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .choise-item {
     display: flex;
-    justify-content: center;
-    width: 500px;
-    max-width: 100%;
+    margin: 1vh 1vw;
+    min-width: 20vw;
+    width: 400px;
+    max-width: 80vw;
+}
+
+.choise-image {
+    width: 20%;
+}
+
+.choise-desk { 
+    width: 80%;
 }
 
 .choise-image img {
@@ -383,66 +311,20 @@ main {
     flex-grow: 1;
 }
 
-footer {
-    background-image: linear-gradient(90deg, #eae7dc, #b6986f);
-    width: 100%;
-}
-
-.fot {
+.advertise-block {
     display: flex;
-    gap: 20vw;
-    max-width: 80%;
-    margin: 0 auto;
-    flex-wrap: wrap;
     justify-content: center;
-}
-.fot-item {
-    width: 10rem;
-}
-
-.desc {
-    color: #000;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 200;
-    font-size: 20px;
+    width: 1100px;
+    min-height: 30vh;
+    max-height: 60vh;
+    min-width: 60vw;
+    max-width: 90vw;
+    height: 250px;
+    margin: 8vh auto;
 }
 
-.content-item {
-    text-decoration: underline;
-    color: #000;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 200;
-    font-size: 20px;
+.advertise {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
-
-.map {
-    gap: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.map-item {
-    text-decoration: none;
-    color: #000;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 200;
-    font-size: 20px;
-}
-
-.probel {
-    /* margin-top: 25px; */
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    /* gap: 15px; */
-}
-
-/* body { */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* min-height: 100vh; */
-    /* min-height: 100dvh; */
-/* } */

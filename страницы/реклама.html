@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Слайдер рекламы</title>
+  <link rel="stylesheet" href="../стили/реклама.css">
+  <script defer src="../скрипты/реклама.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var slider = new SimpleAdaptiveSlider('.slider', {
+        autoplay: true,
+        interval: 3000,
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="slider">
+    <div class="slider__wrapper">
+      <div class="slider__items">
+        <div class="slider__item">
+          <span class="slider__item_inner">
+            <span class="slider__item_img">
+              <img class="slider__item_photo" src="../картинки/главная/korm.png" alt="корм" loading="lazy">
+            </span>
+            <span class="slider__item_testimonial">
+              <span class="slider__item_name">Сухой корм для кошек</span>
+              <span class="slider__item_post">Proхвост с кроликом, 350г</span>
+              <span class="slider__item_text">
+                Корм для кошек Proхвост с кроликом — полноценный рацион для домашних питомцев любых пород. Корм считается полнорационным и сбалансированным и подходит для ежедневного кормления.
+              </span>
+              <span class="slider__item_action">
+                <a class="btn" href="https://kormoteka.ru/catalog/dlya-koshek/400/" target="_blank">Купить за 478р.</a>
+              </span>
+            </span>
+          </span>
+        </div>
+        <div class="slider__item">
+          <span class="slider__item_inner">
+            <span class="slider__item_img">
+              <img class="slider__item_photo" src="../картинки/главная/budka.png" alt="" loading="lazy">
+            </span>
+            <span class="slider__item_testimonial">
+              <span class="slider__item_name">Будка для собак</span>
+              <span class="slider__item_post">FERPLAST Domus Large деревянная,81,5х102,5х78см</span>
+              <span class="slider__item_text">
+                Domus — отличная будка для собак, комфортная, прочная, с изоляцией от земли и обработкой от влаги.
+              </span>
+              <span class="slider__item_action">
+                <a class="btn" href="https://www.bethowen.ru/catalogue/dogs/volery-i-budki/budki/budka-dlya-sobak-ferplast-domus-large-derevyannaya-81-5kh102-5kh78sm/?oid=387072" target="_blank">Купить за 22 440р.</a>
+              </span>
+            </span>
+          </span>
+        </div>
+        <div class="slider__item">
+          <span class="slider__item_inner">
+            <span class="slider__item_img">
+              <img class="slider__item_photo" src="../картинки/главная/когтеточка.png" alt="" loading="lazy">
+            </span>
+            <span class="slider__item_testimonial">
+              <span class="slider__item_name">Комплекс-когтеточка "Пижон"</span>
+              <span class="slider__item_post"> 33 х 76 х 105см, мех, джут, бежевый</span>
+              <span class="slider__item_text">
+                Когтеточка-комплекс станет настоящей игровой площадкой для вашей кошки, обезопасив мебель от стачивания когтей и погрызов.
+              </span>
+              <span class="slider__item_action">
+                <a class="btn" href="https://www.sima-land.ru/9519781/kompleks-kogtetochka-pizhon-razbornyy-s-gamakom-33-h-76-h-105sm-meh-dzhut-bezhevyy/" target="_blank">Купить за 4200р.</a>
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+    <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+  </div>
+</body>
+
+</html>
+
+						

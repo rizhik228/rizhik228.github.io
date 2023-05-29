@@ -1,0 +1,66 @@
+footer {
+    background-image: linear-gradient(90deg, #eae7dc, #b6986f);
+    width: 100%;
+}
+
+.fot {
+    display: flex;
+    gap: 1.5rem 0;
+    width: 900px;
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fot-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 16rem;
+}
+
+.fot-item p,
+.fot-item span {
+    margin: 3px 0;
+}
+
+.desc {
+    color: #000;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.content-item {
+    text-decoration: underline;
+    color: #000;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.map {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.map-item {
+    box-sizing: content-box;
+    text-decoration: none;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    width: 55%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}

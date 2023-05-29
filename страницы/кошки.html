@@ -1,155 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles/кошки.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>Bon Ami</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../стили/животные.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet" />
+  <title>Bon Ami</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="header">
-    <div class="container">
-      <div class="header-line">
-        <div class="header-logo">
-          <img src="../картинки/лого.png" alt="" />
-        </div>
-
-        <div class="navigation">
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="../index.html">Главная</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="услуги.html">Услуги</a>
-            <div class="navigation-item__dropdown">
-              <a class="navigation-item__link" href="цены.html">Цены</a>
-              <a class="navigation-item__link" href="кошки.html">Кошки</a>
-              <a class="navigation-item__link" href="собаки.html">Собаки</a>
-            </div>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="фотогалерея.html">Фотогалерея</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="о нас.html">О нас</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="контакты.html">Контакты</a>
+    <div class="header-line">
+      <div class="header-logo">
+        <img src="../картинки/лого.png" alt="" loading="lazy">
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html" class="active">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Услуги
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="услуги.html">Наши услуги</a>
+            <a href="цены.html">Цены</a>
+            <a href="кошки.html" class="active">Кошки</a>
+            <a href="собаки.html">Собаки</a>
           </div>
         </div>
+        <a href="фотогалерея.html">Фотогалерея</a>
+        <a href="контакты.html">Контакты</a>
+        <a href="о нас.html">О нас</a>
+        <a href="javascript:void(0)" style="font-size: 15px" class="icon" onclick="myFunction()">☰</a>
       </div>
-     
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-title">
+      <p>Зачем нужна стрижка кошкам?</p>
+    </div>
+    <div class="main-item">
+      <div class="main-desc">
+        <p>
+          1. Уход за шерстью: длинная шерсть у кошек может запутываться и
+          образовывать комки, которые могут привести к различным заболеваниям
+          кожи. Регулярная стрижка поможет избежать этих проблем. <br>
+
+          2. Комфорт: в летний период кошкам может быть жарко в своей густой
+          шерсти. Стрижка позволяет снизить температуру тела и обеспечить
+          комфортное состояние. <br>
+
+          3. Гигиена: длинная шерсть может привлекать мусор и грязь, что может
+          привести к инфекциям и заболеваниям. Стрижка помогает сохранять
+          чистоту и гигиеничность. <br>
+
+          4. Эстетический вид: стрижка может придать кошке более аккуратный и
+          ухоженный вид, что может быть важно для выставочных животных.
+        </p>
+      </div>
+      <div class="main-img">
+        <img src="../картинки/кошки/стрижка.jpg" alt="животные" class="photo" loading="lazy">
+      </div>
+
+    </div>
+    <div class="main-title">
+      <p>Почему мытье и сушка являются важными процедурами?</p>
+    </div>
+    <div class="main-item">
+      <div class="main-desc">
+        <p>
+          1. Гигиена: мытье помогает удалить грязь, пыль и другие загрязнения с
+          шерсти, а также удаляет излишки жиров и секретов кожи, которые могут
+          привести к заболеваниям. <br>
+
+          2. Уход за кожей: мытье помогает улучшить состояние кожи, удаляя
+          омертвевшие клетки и стимулируя кровообращение. <br>
+
+          3. Устранение запаха: мытье помогает устранить неприятный запах,
+          который может возникать у кошек из-за выделений из мочевого пузыря или
+          кишечника.
+
+          4. Улучшение внешнего вида: мытье и сушка помогают улучшить внешний
+          вид собаки, делая ее более привлекательной и здоровой. <br />
+
+          5. Комфорт животного: мытье и сушка помогают обеспечить комфортное
+          состояние собаки, так как скопление грязи и других загрязнений может
+          вызывать зуд и дискомфорт.
+        </p>
+      </div>
+      <div class="main-img">
+        <img src="../картинки/кошки/мойка.jpg" alt="животные" class="photo" loading="lazy">
+      </div>
+
+    </div>
+    <div class="main-title">
+      <p>Основные плюсы маникюра для кошек</p>
+    </div>
+    <div class="main-item">
+      <div class="main-desc">
+        <p>
+          1. Здоровье когтей: регулярный маникюр помогает предотвратить развитие
+          различных заболеваний когтей, таких как вросшие когти и грибок. <br>
+
+          2. Безопасность: маникюр помогает предотвратить травмы, которые могут
+          возникнуть при игре с животным, особенно если оно любит царапаться.
+          <br>
+
+          3. Защита мебели: маникюр помогает предотвратить повреждения мебели и
+          других предметов в доме, которые могут быть повреждены когтями
+          животного. <br>
+
+          3. Улучшение комфорта: короткие когти обеспечивают более комфортное
+          состояние для кошки. <br />
+
+          4. Эстетика: красивый цвет и аккуратные когти могут порадовать не
+          только кошку, но и хозяйку.
+        </p>
+      </div>
+      <div class="main-img">
+        <img src="../картинки/кошки/маник.jpg" alt="животные" class="photo" loading="lazy">
+      </div>
+
+    </div>
+    <div class="main-title">
+      <p>Почему чистка ушей является обязательной процедурой?</p>
+    </div>
+    <div class="main-item">
+      <div class="main-desc">
+        <p>
+          1. Предотвращение инфекций: регулярная чистка ушей помогает
+          предотвратить развитие инфекций, которые могут возникнуть из-за
+          скопления серы и других загрязнений в ушной раковине. <br>
+
+          2. Улучшение слуха: чистка ушей помогает улучшить слух животного, так
+          как удаление серы и других загрязнений позволяет звуковым волнам лучше
+          проходить через ушную раковину. <br>
+
+          3. Предотвращение болезней: регулярная чистка ушей помогает
+          предотвратить развитие различных заболеваний, таких как отит и другие
+          инфекции уха. <br>
+
+          4. Комфорт животного: чистка ушей помогает обеспечить комфортное
+          состояние животного, так как скопление серы и других загрязнений может
+          вызывать зуд и дискомфорт.
+        </p>
+      </div>
+      <div class="main-img">
+        <img src="../картинки/кошки/уши.jpg" alt="животные" class="photo" loading="lazy">
+      </div>
+
+    </div>
+    <div class="main-title">
+      <p>Для чего нужно обрабатывать глаза кошкам?</p>
+    </div>
+    <div class="main-item">
+      <div class="main-desc">
+        <p>
+          1. Предотвращение инфекций: регулярная обработка глаз помогает
+          предотвратить развитие инфекций, которые могут возникнуть из-за
+          скопления грязи, пыли и других загрязнений в глазах. <br>
+
+          2. Улучшение зрения: обработка глаз помогает улучшить зрение
+          животного, так как удаление грязи и других загрязнений позволяет свету
+          лучше проходить через глазную раковину. <br>
+
+          3. Предотвращение болезней: регулярная обработка глаз помогает
+          предотвратить развитие различных заболеваний, таких как конъюнктивит и
+          другие инфекции глаз. <br>
+
+          4. Комфорт животного: обработка глаз помогает обеспечить комфортное
+          состояние животного, так как скопление грязи и других загрязнений
+          может вызывать зуд и дискомфорт.
+        </p>
+      </div>
+      <div class="main-img">
+        <img src="../картинки/кошки/глаза.jpg" alt="животные" class="photo" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+  <a href="#" class="scrollup"></a>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+
+    });
+  </script>
+  <footer>
+    <div class="fot">
+      <div class="fot-item map">
+        <a class="map-item" href="../index.html">Главная</a>
+        <a class="map-item" href="услуги.html">Услуги</a>
+        <a class="map-item" href="цены.html">-Цены</a>
+        <a class="map-item" href="кошки.html">-Кошки</a>
+        <a class="map-item" href="собаки.html">-Собаки</a>
+        <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
+        <a class="map-item" href="о нас.html">О нас </a>
+        <a class="map-item" href="контакты.html">Контакты</a>
+      </div>
+      <div class="fot-item">
+        <div class="fot-item probel">
+          <span> Лапки, ушки и доза любви! </span>
+          <span> Лучший зоосалон 2018, 2022 </span>
+          <span>Сделано в образовательных целях</span>
+          <!-- <a class="content-item" href="@">Используемый контент</a> -->
+        </div>
+      </div>
+      <div class="fot-item contact">
+        <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
+        <span>Телефон: +7 909 967 60 15</span>
+        <span>График работы: без выходных <br>
+          с 9:00 до 21:00</span>
+        <span>Электронная почта: <br>
+          info@bonami.ru</span>
       </div>
     </div>
-    <div class="hair-title">
-        <p>Зачем нужна стрижка кошкам?</p>
-    </div>
-    <div class="hair-desc">
-        <p>1. Уход за шерстью: длинная шерсть у кошек может запутываться и образовывать комки, которые могут привести к различным заболеваниям кожи. 
-            Регулярная стрижка поможет избежать этих проблем. <br>
-
-            2. Комфорт: в летний период кошкам может быть жарко в своей густой шерсти. Стрижка позволяет снизить температуру тела и обеспечить комфортное состояние. <br>
-            
-            3. Гигиена: длинная шерсть может привлекать мусор и грязь, что может привести к инфекциям и заболеваниям. Стрижка помогает сохранять чистоту и гигиеничность. <br>
-            
-            4. Эстетический вид: стрижка может придать кошке более аккуратный и ухоженный вид, что может быть важно для выставочных животных.</p>
-    </div>
-    <div class="bath-title">
-        <p>Почему мытье и сушка являются важными процедурами?</p>
-    </div>
-    <div class="bath-desc">
-        <p>1. Гигиена: мытье помогает удалить грязь, пыль и другие загрязнения с шерсти, а также удаляет излишки жиров и секретов кожи, которые могут привести к заболеваниям. <br>
-
-            2. Уход за кожей: мытье помогает улучшить состояние кожи, удаляя омертвевшие клетки и стимулируя кровообращение. <br>
-            
-            3. Устранение запаха: мытье помогает устранить неприятный запах, который может возникать у кошек из-за выделений из мочевого пузыря или кишечника.</p>
-    </div>
-    <div class="manic-title">
-        <p>Основные плюсы маникюра для кошек</p>
-    </div>
-    <div class="manic-desc">
-        <p>1. Здоровье когтей: регулярный маникюр помогает предотвратить развитие различных заболеваний когтей, таких как вросшие когти и грибок. <br>
-
-            2. Безопасность: маникюр помогает предотвратить травмы, которые могут возникнуть при игре с животным, особенно если оно любит царапаться. <br>
-            
-            3. Защита мебели: маникюр помогает предотвратить повреждения мебели и других предметов в доме, которые могут быть повреждены когтями животного. <br>
-            
-            4. Эстетика: красивый цвет и аккуратные когти могут порадовать не только кошку, но и хозяйку.</p>
-    </div>
-    <div class="ear-title">
-        <p>Почему чистка ушей является обязательной процедурой?</p>
-    </div>
-    <div class="ear-desc">
-        <p>1. Предотвращение инфекций: регулярная чистка ушей помогает предотвратить развитие инфекций, которые могут возникнуть из-за скопления серы и других загрязнений в ушной раковине. <br>
-
-            2. Улучшение слуха: чистка ушей помогает улучшить слух животного, так как удаление серы и других загрязнений позволяет звуковым волнам лучше проходить через ушную раковину. <br>
-            
-            3. Предотвращение болезней: регулярная чистка ушей помогает предотвратить развитие различных заболеваний, таких как отит и другие инфекции уха. <br>
-            
-            4. Комфорт животного: чистка ушей помогает обеспечить комфортное состояние животного, так как скопление серы и других загрязнений может вызывать зуд и дискомфорт.</p>
-    </div>
-    <div class="eyes-title">
-        <p>Для чего нужно обрабатывать глаза кошкам?</p>
-    </div>
-    <div class="eyes-desc">
-        <p>1. Предотвращение инфекций: регулярная обработка глаз помогает предотвратить развитие инфекций, которые могут возникнуть из-за скопления грязи, пыли и других загрязнений в глазах. <br>
-
-            2. Улучшение зрения: обработка глаз помогает улучшить зрение животного, так как удаление грязи и других загрязнений позволяет свету лучше проходить через глазную раковину. <br>
-            
-            3. Предотвращение болезней: регулярная обработка глаз помогает предотвратить развитие различных заболеваний, таких как конъюнктивит и другие инфекции глаз. <br>
-            
-            4. Комфорт животного: обработка глаз помогает обеспечить комфортное состояние животного, так как скопление грязи и других загрязнений может вызывать зуд и дискомфорт.</p>
-    </div>
-    <footer>
-      <div class="fot">
-          <div class="fot-logo">
-              <img src="../картинки/лого.png" alt="логотип">
-              <div class="probel">
-     
-                  <p>Лапки, ушки и доза любви! <br> Лучший зоосалон 2018, 2022</p>
-                  <p>Сделано в образовательных целях</p>
-          
-                  <a class="content-item" href="@">Используемый контент</a>
-              </div>
-          </div>
-          <div class="map">
-              <a class="map-item" href="../index.html">Главная</a>
-              <a class="map-item" href="услуги.html">Услуги</a>
-              <a class="map-item" href="цены.html">-Цены</a>
-              <a class="map-item" href="кошки.html">-Кошки</a>
-              <a class="map-item" href="собаки.html">-Собаки</a>
-              <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
-              <a class="map-item" href="о нас.html">О нас </a>
-              <a class="map-item" href="контакты.html">Контакты</a>
-          </div>
-          <div class="contact">
-              <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
-              <span>Телефон: +7 909 967 60 15</span>
-              <span>График работы: без выходных <br> с 9:00 до 21:00</span>
-              <span>Электронная почта: <br> 
-                  info@bonami.ru</span>
-          </div>
-          </div>
   </footer>
 </body>
+
 </html>

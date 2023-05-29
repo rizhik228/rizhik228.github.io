@@ -1,133 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../стили/о нас.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>Bon Ami</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../стили/о нас.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet" />
+  <title>Bon Ami</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="header">
-    <div class="container">
-      <div class="header-line">
-        <div class="header-logo">
-          <img src="../картинки/лого.png" alt="" />
-        </div>
-
-        <div class="navigation">
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="../index.html">Главная</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="услуги.html">Услуги</a>
-            <div class="navigation-item__dropdown">
-              <a class="navigation-item__link" href="цены.html">Цены</a>
-              <a class="navigation-item__link" href="кошки.html">Кошки</a>
-              <a class="navigation-item__link" href="собаки.html">Собаки</a>
-            </div>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="фотогалерея.html">Фотогалерея</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="о нас.html">О нас</a>
-          </div>
-          <div class="navigation-item">
-            <a class="navigation-item__link" href="контакты.html">Контакты</a>
+    <div class="header-line">
+      <div class="header-logo">
+        <img src="../картинки/лого.png" alt="" loading="lazy" />
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Услуги
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="услуги.html">Наши услуги</a>
+            <a href="цены.html">Цены</a>
+            <a href="кошки.html">Кошки</a>
+            <a href="собаки.html">Собаки</a>
           </div>
         </div>
+        <a href="фотогалерея.html">Фотогалерея</a>
+        <a href="контакты.html">Контакты</a>
+        <a href="о нас.html" class="active">О нас</a>
+        <a href="javascript:void(0)" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-     
-      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
     </div>
-    <div class="history">
-        <p>Наша история</p>
-    </div>
-    <div class="history-desc">
-        <p>Однажды, молодая девушка по имени Кейт решила, что хочет создать свой бизнес. Она любила животных и всегда мечтала о том, чтобы работать с ними.  
-            Однако, она не знала, какой именно бизнес она хотела бы открыть. <br> 
-            <br> 
+  </div>
+  <div class="history">
+    <p>Наша история</p>
+  </div>
+  <div class="history-desc">
+    <p>
+      Однажды, молодая девушка по имени Кейт решила, что хочет создать свой
+      бизнес. Она любила животных и всегда мечтала о том, чтобы работать с
+      ними. Однако, она не знала, какой именно бизнес она хотела бы открыть.
+      Однажды, Кейт заметила, что в ее городе не хватает хороших грумер
+      салонов для животных.
+      Она начала изучать эту сферу и поняла, что это то, что ей нужно. <br /><br />
 
-            Однажды, Кейт заметила, что в ее городе не хватает хороших грумер салонов для животных. <br> 
-            Она начала изучать эту сферу и поняла, что это то, что ей нужно. <br> 
-            <br> 
-            
-            Кейт начала изучать все о груминге животных, посещала семинары и курсы, чтобы научиться всем навыкам и техникам. <br> 
-            Она также изучала рынок и понимала, что ее грумер салон должен быть уникальным. <br> 
-            <br> 
-            
-            Она начала искать подходящее помещение и нашла небольшой уголок в центре города. <br> 
-            Она арендовала его и начала обустраивать свой салон. Она выбрала яркие цвета для дизайна интерьера и установила все необходимое оборудование для груминга животных. <br> 
-            <br> 
-            
-            Кейт начала работать в одиночку и быстро завоевала доверие своих клиентов. <br> 
-            Она была очень терпеливой и заботливой с каждым животным, которое попадало к ней на груминг. <br> Клиенты были в восторге от ее работы и рекомендовали ее своим друзьям. <br> 
-            <br> 
-            
-            Со временем, Кейт наняла нескольких сотрудников и расширила свой бизнес. <br> 
-             Она добавила новые услуги, такие как массаж и лечебный груминг, чтобы помочь животным, которые нуждаются в особом уходе. <br> 
-             <br> 
-            
-            Сегодня, грумер салон Кейт является одним из самых популярных мест в городе для груминга животных. <br> 
-            Она продолжает удивлять своих клиентов своим профессионализмом и любовью к животным.</p>
+      Кейт начала изучать все о груминге животных, посещала семинары и курсы,
+      чтобы научиться всем навыкам и техникам.
+      Она также изучала рынок и понимала, что ее грумер салон должен быть
+      уникальным. <br /><br />
+
+      Она начала искать подходящее помещение и нашла небольшой уголок в центре
+      города.
+      Она арендовала его и начала обустраивать свой салон. Она выбрала яркие
+      цвета для дизайна интерьера и установила все необходимое оборудование
+      для груминга животных. <br />
+      <br />
+
+      Кейт начала работать в одиночку и быстро завоевала доверие своих
+      клиентов.
+      Она была очень терпеливой и заботливой с каждым животным, которое
+      попадало к ней на груминг.
+      Клиенты были в восторге от ее работы и рекомендовали ее своим друзьям.
+      <br />
+      <br />
+
+      Со временем, Кейт наняла нескольких сотрудников и расширила свой бизнес.
+      Она добавила новые услуги, такие как массаж и лечебный груминг, чтобы
+      помочь животным, которые нуждаются в особом уходе.
+      <br />
+
+      Сегодня, грумер салон Кейт является одним из самых популярных мест в
+      городе для груминга животных.
+      Она продолжает удивлять своих клиентов своим профессионализмом и любовью
+      к животным.
+    </p>
+  </div>
+  <div class="our-team">
+      <h1>Наша команда</h1>
+      <iframe src="фото.html" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <a href="#" class="scrollup"></a>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+
+    });
+  </script>
+  <footer>
+    <div class="fot">
+      <div class="fot-item map">
+        <a class="map-item" href="../index.html">Главная</a>
+        <a class="map-item" href="услуги.html">Услуги</a>
+        <a class="map-item" href="цены.html">-Цены</a>
+        <a class="map-item" href="кошки.html">-Кошки</a>
+        <a class="map-item" href="собаки.html">-Собаки</a>
+        <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
+        <a class="map-item" href="о нас.html">О нас </a>
+        <a class="map-item" href="контакты.html">Контакты</a>
+      </div>
+      <div class="fot-item">
+        <div class="fot-item probel">
+          <span> Лапки, ушки и доза любви! </span>
+          <span> Лучший зоосалон 2018, 2022 </span>
+          <span>Сделано в образовательных целях</span>
+          <!-- <a class="content-item" href="@">Используемый контент</a> -->
+        </div>
+      </div>
+      <div class="fot-item contact">
+        <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
+        <span>Телефон: +7 909 967 60 15</span>
+        <span>График работы: без выходных <br />
+          с 9:00 до 21:00</span>
+        <span>Электронная почта: <br />
+          info@bonami.ru</span>
+      </div>
     </div>
-    <div class="history-img">
-        <img src="../картинки/о нас/kate.png" alt="Кейт">
-    </div>
-    <div class="history-kate">
-        <p>Наша основательница - Кейт</p>
-    </div>
-    <footer>
-      <div class="fot">
-          <div class="fot-logo">
-              <img src="../картинки/лого.png" alt="логотип">
-              <div class="probel">
-     
-                  <p>Лапки, ушки и доза любви! <br> Лучший зоосалон 2018, 2022</p>
-                  <p>Сделано в образовательных целях</p>
-          
-                  <a class="content-item" href="@">Используемый контент</a>
-              </div>
-          </div>
-          <div class="map">
-              <a class="map-item" href="../index.html">Главная</a>
-              <a class="map-item" href="услуги.html">Услуги</a>
-              <a class="map-item" href="цены.html">-Цены</a>
-              <a class="map-item" href="кошки.html">-Кошки</a>
-              <a class="map-item" href="собаки.html">-Собаки</a>
-              <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
-              <a class="map-item" href="о нас.html">О нас </a>
-              <a class="map-item" href="контакты.html">Контакты</a>
-          </div>
-          <div class="contact">
-              <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
-              <span>Телефон: +7 909 967 60 15</span>
-              <span>График работы: без выходных <br> с 9:00 до 21:00</span>
-              <span>Электронная почта: <br> 
-                  info@bonami.ru</span>
-          </div>
-          </div>
-    </footer>
+  </footer>
 </body>
+
 </html>

@@ -1,131 +1,161 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../стили/услуги.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet">
-    <title>Bon Ami</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../стили/услуги.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet" />
+  <title>Bon Ami</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class="header">
-        <div class="container">
-          <div class="header-line">
-            <div class="header-logo">
-              <img src="../картинки/лого.png" alt="" />
-            </div>
-    
-            <div class="navigation">
-              <div class="navigation-item">
-                <a class="navigation-item__link" href="../index.html">Главная</a>
-              </div>
-              <div class="navigation-item">
-                <a class="navigation-item__link" href="услуги.html">Услуги</a>
-                <div class="navigation-item__dropdown">
-                  <a class="navigation-item__link" href="цены.html">Цены</a>
-                  <a class="navigation-item__link" href="кошки.html">Кошки</a>
-                  <a class="navigation-item__link" href="собаки.html">Собаки</a>
-                </div>
-              </div>
-              <div class="navigation-item">
-                <a class="navigation-item__link" href="фотогалерея.html">Фотогалерея</a>
-              </div>
-              <div class="navigation-item">
-                <a class="navigation-item__link" href="о нас.html">О нас</a>
-              </div>
-              <div class="navigation-item">
-                <a class="navigation-item__link" href="контакты.html">Контакты</a>
-              </div>
-            </div>
-          </div>
-         
+  <div class="header">
+    <div class="header-line">
+      <div class="header-logo">
+        <img src="../картинки/лого.png" alt="" loading="lazy" />
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Услуги
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="услуги.html" class="active">Наши услуги</a>
+            <a href="цены.html">Цены</a>
+            <a href="кошки.html">Кошки</a>
+            <a href="собаки.html">Собаки</a>
           </div>
         </div>
-    <div class="service">
-        <p>Наши Услуги</p>
+        <a href="фотогалерея.html">Фотогалерея</a>
+        <a href="контакты.html">Контакты</a>
+        <a href="о нас.html">О нас</a>
+        <a href="javascript:void(0)" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
     </div>
-    <div class="descr">
-        <p align="left" >Грумер-салон – это место, где вы можете дать своему питомцу <br>
-            полный уход и улучшить его внешний вид. <br>
-            В грумер-салонах предоставляются различные услуги, <br>
-            которые помогут сделать вашего любимца более красивым, здоровым и ухоженным.</p>
+  </div>
+  <div class="service">
+    <p>Наши Услуги</p>
+  </div>
+  <div class="main-item">
+    <div class="main-text descr">
+      <p align="left">
+        Грумер-салон – это место, где вы можете дать своему питомцу
+        полный уход и улучшить его внешний вид. В грумер-салонах предоставляются различные услуги,
+        которые помогут сделать вашего любимца более красивым, здоровым и
+        ухоженным.
+      </p>
     </div>
     <div class="img">
-        <img src="../картинки/услуги/grey-fluffy.png" alt="собака и кот">
+      <img src="../картинки/услуги/grey-fluffy.png" alt="собака и кот" loading="lazy" />
     </div>
-    <div class="hair">
-        <p align="right">Одной из основных услуг является стрижка. 
-            Грумеры профессионально обрезают шерсть вашего питомца, 
-            чтобы подчеркнуть его форму и придать ему более эстетичный внешний вид. 
-            Существует множество видов стрижек для разных пород собак и кошек, 
-            поэтому грумеры всегда готовы проконсультировать вас и помочь 
-            выбрать наиболее подходящую стрижку для вашего питомца.</p>
-    </div>
+  </div>
+  <div class="main-item hair">
     <div class="img-scissors">
-        <img src="../картинки/услуги/scissors2.png" alt="ножницы">
+      <img src="../картинки/услуги/scissors2.png" alt="ножницы" loading="lazy" />
     </div>
-    <div class="options">
-        <p align="left">Также в грумер-салонах проводятся услуги по уходу за шерстью и кожей животного. <br>
-            Грумеры делают гигиенические стрижки, подстригают когти, чистят уши и глаза, <br>
-            а также проводят различные процедуры для улучшения состояния шерсти и кожи. <br>
-            Это может быть массаж, оздоровительные процедуры, использование специальных шампуней.</p>
+    <div class="main-text">
+      <p align="left">
+        Одной из основных услуг является стрижка. Грумеры профессионально
+        обрезают шерсть вашего питомца, чтобы подчеркнуть его форму и придать
+        ему более эстетичный внешний вид. Существует множество видов стрижек для
+        разных пород собак и кошек, поэтому грумеры всегда готовы проконсультировать вас и помочь выбрать наиболее
+        подходящую стрижку для
+        вашего питомца.
+      </p>
+    </div>
+
+  </div>
+  <div class="main-item">
+    <div class="main-text options">
+      <p align="left">
+        Также в грумер-салонах проводятся услуги по уходу за шерстью и кожей
+        животного. Грумеры делают гигиенические стрижки, подстригают когти, чистят уши и
+        глаза, а также проводят различные процедуры для улучшения состояния шерсти и
+        кожи. Это может быть массаж, оздоровительные процедуры, использование
+        специальных шампуней.
+      </p>
     </div>
     <div class="img2">
-        <img src="../картинки/услуги/groomer.png" alt="грумер">
+      <img src="../картинки/услуги/groomer.png" alt="грумер" loading="lazy" />
     </div>
-    <div class="btn">
-              <a class="button" href="цены.html">Перейти к ценам</a>
+  </div>
+  <div class="btn">
+    <a class="button" href="цены.html">Перейти к ценам</a>
+  </div>
+  <a href="#" class="scrollup"></a>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+
+    });
+  </script>
+  <footer>
+    <div class="fot">
+      <div class="fot-item map">
+        <a class="map-item" href="../index.html">Главная</a>
+        <a class="map-item" href="услуги.html">Услуги</a>
+        <a class="map-item" href="цены.html">-Цены</a>
+        <a class="map-item" href="кошки.html">-Кошки</a>
+        <a class="map-item" href="собаки.html">-Собаки</a>
+        <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
+        <a class="map-item" href="о нас.html">О нас </a>
+        <a class="map-item" href="контакты.html">Контакты</a>
+      </div>
+      <div class="fot-item">
+        <div class="fot-item probel">
+          <span> Лапки, ушки и доза любви! </span>
+          <span> Лучший зоосалон 2018, 2022 </span>
+          <span>Сделано в образовательных целях</span>
+          <!-- <a class="content-item" href="@">Используемый контент</a> -->
+        </div>
+      </div>
+      <div class="fot-item contact">
+        <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
+        <span>Телефон: +7 909 967 60 15</span>
+        <span>График работы: без выходных <br />
+          с 9:00 до 21:00</span>
+        <span>Электронная почта: <br />
+          info@bonami.ru</span>
+      </div>
     </div>
-    <footer>
-      <div class="fot">
-          <div class="fot-logo">
-              <img src="../картинки/лого.png" alt="логотип">
-              <div class="probel">
-      
-                  <p>Лапки, ушки и доза любви! <br> Лучший зоосалон 2018, 2022</p>
-                  <p>Сделано в образовательных целях</p>
-          
-                  <a class="content-item" href="@">Используемый контент</a>
-              </div>
-          </div>
-          <div class="map">
-              <a class="map-item" href="../index.html">Главная</a>
-              <a class="map-item" href="услуги.html">Услуги</a>
-              <a class="map-item" href="цены.html">-Цены</a>
-              <a class="map-item" href="кошки.html">-Кошки</a>
-              <a class="map-item" href="собаки.html">-Собаки</a>
-              <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
-              <a class="map-item" href="о нас.html">О нас </a>
-              <a class="map-item" href="контакты.html">Контакты</a>
-          </div>
-          <div class="contact">
-              <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
-              <span>Телефон: +7 909 967 60 15</span>
-              <span>График работы: без выходных <br> с 9:00 до 21:00</span>
-              <span>Электронная почта: <br> 
-                  info@bonami.ru</span>
-          </div>
-          </div>
-    </footer>
+  </footer>
 </body>
+
 </html>

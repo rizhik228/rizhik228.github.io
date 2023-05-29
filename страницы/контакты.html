@@ -1,162 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../стили/контакты.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap"
-      rel="stylesheet"
-    />
-    <title>Bon Ami</title>
-  </head>
-  <body>
-    <div class="header">
-      <div class="container">
-        <div class="header-line">
-          <div class="header-logo">
-            <img src="../картинки/лого.png" alt="" />
-          </div>
 
-          <div class="navigation">
-            <div class="navigation-item">
-              <a class="navigation-item__link" href="../index.html">Главная</a>
-            </div>
-            <div class="navigation-item">
-              <a class="navigation-item__link" href="услуги.html">Услуги</a>
-              <div class="navigation-item__dropdown">
-                <a class="navigation-item__link" href="цены.html">Цены</a>
-                <a class="navigation-item__link" href="кошки.html">Кошки</a>
-                <a class="navigation-item__link" href="собаки.html">Собаки</a>
-              </div>
-            </div>
-            <div class="navigation-item">
-              <a class="navigation-item__link" href="фотогалерея.html"
-                >Фотогалерея</a
-              >
-            </div>
-            <div class="navigation-item">
-              <a class="navigation-item__link" href="о нас.html">О нас</a>
-            </div>
-            <div class="navigation-item">
-              <a class="navigation-item__link" href="контакты.html">Контакты</a>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../стили/контакты.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet" />
+  <title>Bon Ami</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-line">
+      <div class="header-logo">
+        <img src="../картинки/лого.png" alt="" loading="lazy" />
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Услуги
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="услуги.html">Наши услуги</a>
+            <a href="цены.html">Цены</a>
+            <a href="кошки.html">Кошки</a>
+            <a href="собаки.html">Собаки</a>
           </div>
         </div>
+        <a href="фотогалерея.html">Фотогалерея</a>
+        <a href="контакты.html" class="active">Контакты</a>
+        <a href="о нас.html">О нас</a>
+        <a href="javascript:void(0)" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-    </div>
-    <div class="cont-title">
-      <p>Наши контакты</p>
-    </div>
-    </div>
-    <div class="conthandler">
-    <div class="scr">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af1d7218e8e00ee64745f97bf446f7e854cd1860c25e0e2df69e3e92b16f491b7&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-    </div>
-    <div class="int">
-      <img src="../картинки/контакты/здание.png" alt="здание" />
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
     </div>
   </div>
-    <div class="int-desc">
-      <p>Здание, в котором мы находимся</p>
+  <div class="cont-title">
+    <p>Наши контакты</p>
+  </div>
+  </div>
+  <div class="conthandler">
+    <div class="scr">
+      <script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af1d7218e8e00ee64745f97bf446f7e854cd1860c25e0e2df69e3e92b16f491b7&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
-    <div class="cont">
-      <div class="cont-image">
-        <img src="../картинки/контакты/free-icon-phone.png" alt="Телефон" />
+    <div class="int">
+      <img src="../картинки/контакты/здание.png" alt="здание" loading="lazy" />
+    </div>
+  </div>
+  <div class="int-desc">
+    <p>Здание, в котором мы находимся</p>
+  </div>
+  <div class="cont">
+    <div class="cont-row">
+      <div class="cont-item">
+        <div class="cont-image">
+          <img src="../картинки/контакты/free-icon-phone.png" alt="Телефон" loading="lazy" />
+        </div>
+        <div class="cont-desk">
+          <span>Телефон:<br />
+            +7 909 967 60 15</span>
+        </div>
       </div>
-      <div class="cont-desk">
-        <span
-          >Телефон:<br />
-          +7 909 967 60 15</span
-        >
-      </div>
-      <div class="cont-image">
-        <img src="../картинки/контакты/free-icon-placeholder.png" alt="место" />
-      </div>
-      <div class="cont-desk">
-        <span
-          >Адрес: <br />
-          г. Москва, ул. Гоголя д. 28</span
-        >
-      </div>
-      <div class="cont-image">
-        <img src="../картинки/контакты/free-icon-time.png" alt="время" />
-      </div>
-      <div class="cont-desk">
-        <span
-          >График работы: без выходных <br />
-          с 9:00 до 21:00</span
-        >
-      </div>
-      <div class="cont-image">
-        <img src="../картинки/контакты/free-icon-mail.png" alt="мэил" />
-      </div>
-      <div class="cont-desk">
-        <span
-          >Электронная почта: <br />
-          info@bonami.ru</span
-        >
+      <div class="cont-item">
+        <div class="cont-image">
+          <img src="../картинки/контакты/free-icon-placeholder.png" alt="место" loading="lazy" />
+        </div>
+        <div class="cont-desk">
+          <span>Адрес: <br />
+            г. Москва, ул. Гоголя д. 28</span>
+        </div>
       </div>
     </div>
-
-    <footer>
-      <div class="fot">
-        <div class="fot-logo">
-          <img src="../картинки/лого.png" alt="логотип" />
-          <div class="probel">
-            <p>
-              Лапки, ушки и доза любви! <br />
-              Лучший зоосалон 2018, 2022
-            </p>
-            <p>Сделано в образовательных целях</p>
-
-            <a class="content-item" href="@">Используемый контент</a>
-          </div>
+    <div class="cont-row">
+      <div class="cont-item">
+        <div class="cont-image">
+          <img src="../картинки/контакты/free-icon-time.png" alt="время" loading="lazy" />
         </div>
-        <div class="map">
-          <a class="map-item" href="../index.html">Главная</a>
-          <a class="map-item" href="услуги.html">Услуги</a>
-          <a class="map-item" href="цены.html">-Цены</a>
-          <a class="map-item" href="кошки.html">-Кошки</a>
-          <a class="map-item" href="собаки.html">-Собаки</a>
-          <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
-          <a class="map-item" href="о нас.html">О нас </a>
-          <a class="map-item" href="контакты.html">Контакты</a>
-        </div>
-
-        <div class="contact">
-          <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
-          <span>Телефон: +7 909 967 60 15</span>
-          <span
-            >График работы: без выходных <br />
-            с 9:00 до 21:00</span
-          >
-          <span
-            >Электронная почта: <br />
-            info@bonami.ru</span
-          >
+        <div class="cont-desk">
+          <span>График работы:<br> с 9:00 до 21:00</span>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="cont-item">
+        <div class="cont-image">
+          <img src="../картинки/контакты/free-icon-mail.png" alt="мэил" loading="lazy" />
+        </div>
+        <div class="cont-desk">
+          <span>Электронная почта: <br />
+            info@bonami.ru</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="scrollup"></a>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+
+    });
+  </script>
+  <footer>
+    <div class="fot">
+      <div class="fot-item map">
+        <a class="map-item" href="../index.html">Главная</a>
+        <a class="map-item" href="услуги.html">Услуги</a>
+        <a class="map-item" href="цены.html">-Цены</a>
+        <a class="map-item" href="кошки.html">-Кошки</a>
+        <a class="map-item" href="собаки.html">-Собаки</a>
+        <a class="map-item" href="фотогалерея.html">Фотогалерея</a>
+        <a class="map-item" href="о нас.html">О нас </a>
+        <a class="map-item" href="контакты.html">Контакты</a>
+      </div>
+      <div class="fot-item">
+        <div class="fot-item probel">
+          <span>
+            Лапки, ушки и доза любви!
+          </span>
+          <span>
+            Лучший зоосалон 2018, 2022
+          </span>
+          <span>Сделано в образовательных целях</span>
+          <!-- <a class="content-item" href="@">Используемый контент</a> -->
+        </div>
+      </div>
+      <div class="fot-item contact">
+        <span>Адрес: г. Москва, ул. Гоголя д. 28</span>
+        <span>Телефон: +7 909 967 60 15</span>
+        <span>График работы: без выходных <br />
+          с 9:00 до 21:00</span>
+        <span>Электронная почта: <br />
+          info@bonami.ru</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

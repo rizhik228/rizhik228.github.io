@@ -1,71 +1,15 @@
+@import "header.css";
+@import "footer.css";
+@import "scroll_up.css";
+
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
 }
+
 .container {
-   margin: 0px 150px; 
-}
-
-.header {
-    background-image: linear-gradient(90deg, #eae7dc, #b6986f);
-    height: 220px;
-}
-
-.header-line {
-    padding-top: 67px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.header-logo {
-    margin-left: -150px;
-}
-
-.navigation {
-    display: flex;
-    gap: 25px;
-}
-
-.navigation-item {
-    position: relative;
-    padding: 5px 25px;
-    text-align: center;
-}
-
-.navigation-item:hover {
-    background-color: #EBE7E7;
-}
-
-.navigation-item:hover .navigation-item__dropdown {
-    display: flex;
-    background-color: #EBE7E7;
-}
-
-.navigation-item__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 21px;
-    transition: color 0.3s linear;
-}
-
-.navigation-item__link:hover {
-    color: sienna;
-}
-
-.navigation-item__dropdown {
-    position: absolute;
-    padding: 5px 0 0 0;
-    width: 100%;
-    left: 0;
-    display: none;
-    flex-direction: column;
-}
-
-.navigation-item__dropdown .navigation-item__link {
-    padding: 5px 0;
+    margin: 0px 150px;
 }
 
 .conthandler {
@@ -74,7 +18,7 @@ body {
     justify-content: center;
 }
 
-.int{
+.int {
     position: relative;
     display: flex;
     margin: 5vh 5vh;
@@ -85,7 +29,8 @@ body {
     /* margin: 50% 0; */
     /* position: relative; */
 }
-.int-desc{
+
+.int-desc {
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 300;
@@ -105,7 +50,7 @@ body {
     /* max-width: 30%; */
 }
 
-.cont-title{
+.cont-title {
     color: #000;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
@@ -117,11 +62,27 @@ body {
     align-items: center;
     font-style: italic;
 }
+
 .cont {
-display: flex;
-justify-content: space-between;
-margin: 50px 76px 0px 150px;
-align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cont-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cont-item {
+    display: flex;
+    margin: 1vh 1vw;
+    min-width: 20vw;
+    width: 400px;
+    max-width: 80vw;
 }
 
 .cont-desk {
@@ -129,61 +90,13 @@ align-items: center;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 100;
     font-size: 24px;
-    margin-top: 25px;
-}
-footer{
-    background-image: linear-gradient(90deg, #eae7dc, #b6986f);
-    padding: 90px;
-    margin-top: 50px;
-}
-.fot{
-    display: flex;
-    margin-left: 75px;
-    gap: 350px;
-
-}
-.desc {
-    color: #000;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 200;
-    font-size: 20px;
 }
 
-.content-item{
-    text-decoration: underline;
-    color: #000;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 200;
-    font-size: 20px;
+
+.cont-image {
+    width: 20%;
 }
 
-.map {
-gap: 5px;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-}
-
-.map-item{
-    text-decoration: none;
-    color: #000;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 200;
-    font-size: 20px;
-}
-.probel {
-    margin-top: 25px;
-}
-
-.contact {
-display: flex;
-flex-direction: column;
-gap: 15px;
-}
-
-body{
-    display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
+.cont-desk { 
+    width: 80%;
 }

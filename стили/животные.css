@@ -1,0 +1,82 @@
+@import "header.css";
+@import "footer.css";
+@import "scroll_up.css";
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+   margin: 0vh 8vw; 
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5vh 0;
+}
+
+.main-desc p,
+.main-title p { 
+    margin: 0 auto;
+}
+
+.main-item {
+    flex-wrap: wrap;
+    display: flex;
+    /* margin: 0 8vw; */
+
+}
+
+.main-title {
+    font-weight: 500;
+    color: #000;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 30px;
+    margin: 1vh 8vw;
+}
+
+.main-desc {
+    font-weight: 300;
+    font-size: 25px;
+    min-width: 35vw;
+    max-width: 100vw;
+    width: 450px;
+    margin: 0 2vw 0 8vw;
+    text-align: justify;
+}
+
+.main-img {
+    display: flex;
+    float: right;
+    margin: 0 auto;
+    min-width: 40%;
+    max-width: 100%;
+    width: 400px;
+}
+
+.main-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+body{
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+@media screen and (max-width: 961px) {
+    .main-desc {
+        width: 100vw;
+        margin: 0 8vw;
+    }
+
+    .main-img {
+        width: 100vw;
+        margin: 1vh 8vw;
+    }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Слайдер фото</title>
+    <link href="../стили/фото.css" rel="stylesheet" />
+    <script src="../скрипты/фото.js" defer></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+
+      .container {
+        max-width: 350px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 710px;
+          margin: 0 auto;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1050px;
+          margin: 0 auto;
+        }
+      }
+
+      .itc-slider {
+        overflow: hidden;
+        padding-bottom: 35px;
+      }
+
+      .itc-slider__wrapper {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+
+      @media (min-width: 768px) {
+        .itc-slider__item {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .itc-slider__item {
+          flex: 0 0 33.3333333333%;
+          max-width: 33.3333333333%;
+        }
+      }
+
+      .card {
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .card__header {
+        position: relative;
+      }
+
+      .card__img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .card__section {
+        position: absolute;
+        bottom: 6px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 14px;
+        border-radius: 12px;
+        line-height: 1;
+      }
+
+      .card__title {
+        background: #fafafa;
+        color: #424242;
+        white-space: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.3;
+        padding: 10px 15px;
+        margin: 0;
+        height: 72px;
+      }
+
+      .card__footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: #fafafa;
+        padding: 10px 15px 15px;
+        color: #616161;
+      }
+
+      .card__photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .card__author {
+        margin-left: 6px;
+      }
+
+      .card__icon {
+        margin-left: auto;
+        width: 18px;
+        max-height: 20px;
+      }
+
+      .card__views {
+        margin-left: 6px;
+      }
+
+      .itc-slider__btn {
+        background-color: unset;
+      }
+
+      .itc-slider__btn:hover,
+      .itc-slider__btn:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .itc-slider__indicators {
+        bottom: 0;
+      }
+
+      .itc-slider__indicator {
+        background-color: #eee;
+      }
+
+      .itc-slider__indicator_active {
+        background-color: #757575;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div
+        class="itc-slider"
+        data-autoplay="false"
+        data-interval="5000"
+        data-loop="true"
+        data-refresh="true"
+        data-slider="itc-slider"
+      >
+        <div class="itc-slider__wrapper">
+          <div class="itc-slider__items">
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото4.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Основательница зоосалона</h2>
+                <span class="card_desc"
+                  >Работает над улучшением своего бизнеса и расширением услуг, чтобы удовлетворить потребности всех своих клиентов.</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Кейт</span>
+                </footer>
+              </div>
+            </div>
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото6.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Администратор</h2>
+                <span class="card_desc"
+                  >Отвечает за организацию работы и обеспечение высококачественного сервиса для клиентов</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Диана</span>
+                </footer>
+              </div>
+            </div>
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото5.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Ведущий грумер</h2>
+                <span class="card_desc"
+                  >Отвечает за выполнение всех видов груминга животных в зоосалоне и следит за работой всех специалистов</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Мирослав</span>
+                </footer>
+              </div>
+            </div>
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото1.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Специалист по уходу за кошками</h2>
+                <span class="card_desc"
+                  >Отвечает за выполнение всех процедур по уходу за кошками в зоосалоне и учавствует в различных выставках</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Ася</span>
+                </footer>
+              </div>
+            </div>
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото7.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Специалист по уходу за собаками</h2>
+                <span class="card_desc"
+                  >Отвечает за выполнение всех процедур по уходу за собаками в зоосалоне и учавствует в различных выставках</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Мария</span>
+                </footer>
+              </div>
+            </div>
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото2.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Грумер</h2>
+                <span class="card_desc"
+                  >Отвечает за прием животных на груминг, выполнение всех видов груминга, оценку здоровья животного</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Юлия</span>
+                </footer>
+              </div>
+            </div>
+            <div class="itc-slider__item">
+              <div class="card">
+                <header class="card__header">
+                  <img
+                    alt="..."
+                    class="card__img"
+                    height="250"
+                    loading="lazy"
+                    src="../картинки/о нас/фото3.png"
+                    width="350"
+                  />
+                </header>
+                <h2 class="card__title">Помощница грумера</h2>
+                <span class="card_desc"
+                  >Помогает грумеру в выполнении всех видов груминга, ухаживать за животными, поддерживать чистоту и порядок в салоне</span
+                >
+                <footer class="card__footer">
+                  <span class="card__author">Валерия</span>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="itc-slider__btn itc-slider__btn_prev"></button>
+        <button class="itc-slider__btn itc-slider__btn_next"></button>
+        <ol class="itc-slider__indicators">
+          <li class="itc-slider__indicator" data-slide-to="0"></li>
+          <li class="itc-slider__indicator" data-slide-to="1"></li>
+          <li class="itc-slider__indicator" data-slide-to="2"></li>
+          <li class="itc-slider__indicator" data-slide-to="3"></li>
+          <li class="itc-slider__indicator" data-slide-to="4"></li>
+          <li class="itc-slider__indicator" data-slide-to="5"></li>
+          <li class="itc-slider__indicator" data-slide-to="6"></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
